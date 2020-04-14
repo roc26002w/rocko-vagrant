@@ -16,3 +16,5 @@ apt-get install -y curl \
                    git \
                    git-lfs \
                    unzip
+
+mkdir /home/vagrant/code
