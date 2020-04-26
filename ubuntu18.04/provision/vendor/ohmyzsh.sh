@@ -17,3 +17,4 @@ chown -R vagrant:vagrant /home/vagrant/.oh-my-zsh
 chown vagrant:vagrant /home/vagrant/.zshrc
 chsh -s /bin/zsh vagrant
 git clone https://github.com/qoomon/zsh-lazyload $ZSH_CUSTOM/plugins/zsh-lazyload
+git clone https://github.com/bhilburn/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k

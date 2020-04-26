@@ -10,9 +10,11 @@ Vagrant.configure("2") do |config|
 
   #require vagrant plugin install vagrant-disksize
   config.disksize.size = '50GB'
+  config.vbguest.auto_update = false
+  config.vbguest.no_remote = true
 
   config.vm.provider "virtualbox" do |v|
-    v.name = "WorkSpace"
+    v.name = "ubutnu18.04"
     v.memory = 8192
     v.cpus = 2
     v.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
