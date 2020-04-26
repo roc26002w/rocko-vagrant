@@ -1,0 +1,32 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+  config.disksize.size = '50GB'
+  # config.vbguest.auto_update = false
+  # config.vbguest.no_remote = true
+
+  config.vm.provider "virtualbox" do |v|
+    v.name = "ubuntu20.04"
+    v.memory = 8192
+    v.cpus = 2
+    v.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
+  end
+
+  config.vm.provision :shell, path: "provision/vendor/init.sh"
+  config.vm.provision :shell, path: "provision/vendor/ohmyzsh.sh"
+  config.vm.provision :shell, path: "provision/vendor/docker.sh"
+  config.vm.provision :shell, path: "provision/vendor/docker-compose.sh"
+  config.vm.provision :shell, path: "provision/vendor/node.sh"
+  config.vm.provision :shell, path: "provision/vendor/fzf.sh"
+  config.vm.provision :shell, path: "provision/vendor/php.sh"
+  config.vm.provision :shell, path: "provision/vendor/neovim.sh"
+
+  config.vm.network :private_network, ip: "192.168.10.11"
+  config.vm.network :forwarded_port, guest: 8001, host: 8001
+  config.vm.network :forwarded_port, guest: 33061, host: 33061
+
+  config.ssh.insert_key = false
+  config.vm.provision "file", source: "~/.ssh/id_rsa", destination: "~/.ssh/id_rsa"
+end
