@@ -16,7 +16,6 @@ apt-get update
 
 apt-get install -y python3-dev \
                    python3-pip \
-                   python3-venv \
                    python-msgpack \
                    build-essential \
                    libssl-dev \
@@ -24,7 +23,12 @@ apt-get install -y python3-dev \
 
 mkdir /home/vagrant/.env
 mkdir /home/vagrant/.env/python
+
+apt-get install -y python3-venv
+
 python3 -m venv /home/vagrant/.env/python
 source /home/vagrant/.env/python/bin/activate
+pip install neovim
 
 chown -R vagrant:vagrant /home/vagrant/.env
+

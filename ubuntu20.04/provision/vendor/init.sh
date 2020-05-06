@@ -19,3 +19,6 @@ apt-get install -y curl \
 
 mkdir /home/vagrant/code
 chown -R vagrant:vagrant code
+
+git config --global user.email "roc26002w@gmail.com"
+git config --global user.name "Rocko"

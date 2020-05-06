@@ -22,3 +22,5 @@ echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> /ho
 echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> /home/vagrant/.zshrc
 
 su - vagrant -c 'source /home/vagrant/.zshrc && nvm install 10'
+
+npm install -g neovim

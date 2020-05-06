@@ -11,8 +11,8 @@ touch /home/vagrant/.features/rocko-environment
 chown -Rf vagrant:vagrant /home/vagrant/.features
 
 # Install rocko-environment
-su vagrant -c 'git clone git@github.com:roc26002w/rocko-vim.git /home/vagrant/config/rocko-vim'
+su vagrant -c 'git clone https://github.com/roc26002w/rocko-vim.git /home/vagrant/.config/rocko-vim'
 
-su vagrant -c 'ln -fs /home/vagrant/config/rocko-vim/oh-my-zsh/.zshrc /home/vagrant/.zshrc'
-su vagrant -c 'ln -fs /home/vagrant/config/rocko-vim/neovim/.config/nvim /home/vagrant/.config/'
-su vagrant -c 'ln -fs /home/vagrant/config/rocko-vim/oh-my-zsh/.theme /home/vagrant/.oh-my-zsh/custom/themes/.theme'
+su vagrant -c 'ln -fs /home/vagrant/.config/rocko-vim/oh-my-zsh/.zshrc /home/vagrant/.zshrc'
+su vagrant -c 'ln -fs /home/vagrant/.config/rocko-vim/neovim/.config/nvim /home/vagrant/.config/'
+su vagrant -c 'ln -fs /home/vagrant/.config/rocko-vim/oh-my-zsh/.theme /home/vagrant/.oh-my-zsh/custom/themes/.theme'
