@@ -11,6 +11,6 @@ touch /home/vagrant/.features/go
 chown -Rf vagrant:vagrant /home/vagrant/.features
 
 # install go
-wget -qO- https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz  | tar xvz - -C /tmp/
+wget -qO- https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz  | tar -zxvf - -C /tmp/
 
 mv /tmp/go /usr/local
