@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+echo '======= Install rocko environment ======'
+
+if [ -f /home/ubuntu/.features/rocko-environment ]
+then
+    echo "rocko-environment already installed."
+    exit 0
+fi
+
+touch /home/ubuntu/.features/rocko-environment
+chown -Rf ubuntu:ubuntu /home/ubuntu/.features
+
+# Install rocko-environment
+su ubuntu -c 'git clone https://github.com/roc26002w/rocko-vim.git /home/ubuntu/.config/rocko-vim'
+
+su ubuntu -c 'ln -fs /home/ubuntu/.config/rocko-vim/oh-my-zsh/.zshrc /home/ubuntu/.zshrc'
+su ubuntu -c 'ln -fs /home/ubuntu/.config/rocko-vim/neovim/.config/nvim /home/ubuntu/.config/'
+su ubuntu -c 'ln -fs /home/ubuntu/.config/rocko-vim/oh-my-zsh/.theme /home/ubuntu/.oh-my-zsh/custom/themes/.theme'
