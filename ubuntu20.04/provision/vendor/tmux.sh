@@ -15,7 +15,8 @@ apt-get install tmux
 # setting tmux theme
 git clone https://github.com/gpakosz/.tmux.git /home/vagrant/.tmux
 
-ln -s -f /home/vagrant/.tmux/.tmux.conf /home/vagrant/.tmux.conf
+ln -fs /home/vagrant/.config/rocko-vim/tmux/.tmux.conf /home/vagrant/.tmux.conf
+
 cp /home/vagrant/.tmux/.tmux.conf.local /home/vagrant/
 
 git clone https://github.com/tmux-plugins/tpm /home/vagrant/.tmux/plugins/tpm
