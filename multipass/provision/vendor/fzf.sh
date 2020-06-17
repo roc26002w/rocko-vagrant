@@ -13,5 +13,5 @@ chown -Rf ubuntu:ubuntu /home/ubuntu/.features
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git /home/ubuntu/.fzf
 
-su ubuntu -c '/home/ubuntu/.fzf/install'
+su ubuntu -c '/home/ubuntu/.fzf/install --all'
 
