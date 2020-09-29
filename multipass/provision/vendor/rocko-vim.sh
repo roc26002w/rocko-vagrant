@@ -18,4 +18,4 @@ su ubuntu -c 'ln -fs /home/ubuntu/.config/rocko-vim/oh-my-zsh/.zshrc /home/ubunt
 su ubuntu -c 'ln -fs /home/ubuntu/.config/rocko-vim/neovim/.config/nvim /home/ubuntu/.config/nvim'
 su ubuntu -c 'ln -fs /home/ubuntu/.config/rocko-vim/oh-my-zsh/.theme /home/ubuntu/.oh-my-zsh/custom/themes/.theme'
 su ubuntu -c 'ln -sf /home/ubuntu/.config/rocko-vim/tig/.tigrc /home/ubuntu/.tigrc'
-su ubuntu -c 'ln -sf /home/ubunut/.config/rocko-vim/git/.gitconfig /home/ubuntu/.gitconfig'
+su ubuntu -c 'ln -sf /home/ubuntu/.config/rocko-vim/git/.gitconfig /home/ubuntu/.gitconfig'
