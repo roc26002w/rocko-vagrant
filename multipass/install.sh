@@ -13,3 +13,4 @@ bash ./provision/vendor/neovim.sh
 bash ./provision/vendor/rocko-vim.sh
 bash ./provision/vendor/laradock.sh
 bash ./provision/vendor/tmux.sh
+bash ./provision/vendor/ansible.sh
