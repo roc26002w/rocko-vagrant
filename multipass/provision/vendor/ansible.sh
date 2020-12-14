@@ -10,7 +10,7 @@ fi
 touch /home/ubuntu/.features/ansible
 
 # Install ansible
-apt-get install ansible
+apt-get install -y ansible
 
 # Install python ansible
 pip install ansible
