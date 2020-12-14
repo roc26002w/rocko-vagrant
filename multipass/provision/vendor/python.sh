@@ -10,7 +10,7 @@ chown -Rf ubuntu:ubuntu /home/ubuntu/.features
 
 apt-get install -y software-properties-common
 
-add-apt-repository ppa:python-ppa/stable
+add-apt-repository ppa:deadsnakes/ppa
 
 apt-get update
 
