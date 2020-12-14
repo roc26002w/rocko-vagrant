@@ -20,7 +20,7 @@ mkdir /home/ubuntu/code
 chown -R ubuntu:ubuntu code
 
 # auto gen ssh key
-ssh-keygen -f id_rsa -t rsa -N ''
+ssh-keygen -f /home/ubuntu/.ssh/id_rsa -t rsa -N ''
 
 git config --global user.email "roc26002w@gmail.com"
 git config --global user.name "Rocko"
