@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo '======= Install ansible.sh ======'
 
-if [ -f /home/ubuntu/.features/ansible]
+if [ -f /home/ubuntu/.features/ansible ]
 then
     echo "ansible already installed."
     exit 0
@@ -13,6 +13,6 @@ touch /home/ubuntu/.features/ansible
 apt-get install -y ansible
 
 # Install python ansible
-pip install ansible
+su ubuntu -C "pip install ansible"
 
 chown -Rf ubuntu:ubuntu /home/ubuntu/
