@@ -29,6 +29,6 @@ apt-get install -y python3-venv
 python3 -m venv /home/ubuntu/.env/python
 source /home/ubuntu/.env/python/bin/activate
 
-pip install neovim
-
 chown -R ubuntu:ubuntu /home/ubuntu/.env
+
+su ubuntu -c "pip install neovim"
