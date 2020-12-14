@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo '======= Install microk8s ======'
-if [ -f /home/ubuntu/.features/microk8s]
+if [ -f /home/ubuntu/.features/microk8s ]
 then
     echo "microk8s already installed."
     exit 0
