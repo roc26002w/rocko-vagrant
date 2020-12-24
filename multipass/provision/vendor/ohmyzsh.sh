@@ -15,6 +15,8 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git /home/ubuntu/.oh-my-zsh
 cp /home/ubuntu/.oh-my-zsh/templates/zshrc.zsh-template /home/ubuntu/.zshrc
 chown ubuntu:ubuntu /home/ubuntu/.zshrc
 git clone https://github.com/qoomon/zsh-lazyload /home/ubuntu/.oh-my-zsh/custom/plugins/zsh-lazyload
-git clone https://github.com/bhilburn/powerlevel9k.git /home/ubuntu/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/ubuntu/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/romkatv/powerlevel10k.git /home/ubuntu/.oh-my-zsh/custom/themes/powerlevel10k
+
 chsh -s /bin/zsh ubuntu
 chown -R ubuntu:ubuntu /home/ubuntu/.oh-my-zsh
