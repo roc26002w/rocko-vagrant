@@ -38,13 +38,13 @@ fi
 # has USER_NAME and not input variable
 if [[ ! -z ${USER_NAME} && -z $1 ]]
 then
-  inputUserNAme
+  inputUserName
   inputGitUserEmail
   inputGitUserName
   checkUserName
 fi
 
-sudo -H -u ${USER_NAME} -c "bash ./provision/vendor/init.sh"
+sudo -H -u ${USER_NAME} bash -c "${PWD}/provision/vendor/init.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/ohmyzsh.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/docker.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/docker-compose.sh"
