@@ -15,7 +15,6 @@ echo "======= ${ZSH_CUSTOM} ==========="
 # Install oh-my-zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ${HOME_PATH}/.oh-my-zsh
 cp ${HOME_PATH}/.oh-my-zsh/templates/zshrc.zsh-template ${HOME_PATH}/.zshrc
-chown ubuntu:ubuntu ${HOME_PATH}/.zshrc
 
 # zsh-lazyload
 git clone https://github.com/qoomon/zsh-lazyload ${ZSH_CUSTOM}/plugins/zsh-lazyload
@@ -28,4 +27,5 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM}/themes/powe
 
 chsh -s /bin/zsh ${USER_NAME}
 chown -R ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.oh-my-zsh
+chown ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.zshrc
 chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
