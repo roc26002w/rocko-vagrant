@@ -50,7 +50,7 @@ bash ./provision/vendor/init.sh
 bash ./provision/vendor/ohmyzsh.sh
 bash ./provision/vendor/docker.sh
 bash ./provision/vendor/docker-compose.sh
-# su - ${USER_NAME} -c "bash ./provision/vendor/go.sh"
+bash ./provision/vendor/go.sh
 # su - ${USER_NAME} -c "bash ./provision/vendor/node.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/fzf.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/php.sh"
