@@ -2,7 +2,7 @@
 
 echo '======= Install init.sh ======'
 
-mkdir ${HOME}/.features
+mkdir ${HOME_PATH}/.features
 
 apt-get update
 
@@ -16,7 +16,8 @@ apt-get install -y curl \
                    git-lfs \
                    unzip
 
-mkdir ${HOME}/code
+mkdir ${HOME_PATH}/code
+chown -R ${USER_NAME}:${USER_NAME} ${HOME_PATH}/code
 
 # auto gen ssh key
 ssh-keygen -f ${HOME}/.ssh/id_rsa -t rsa -N ''
