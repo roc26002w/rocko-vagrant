@@ -2,7 +2,6 @@
 
 echo '======= Install init.sh ======'
 
-mkdir ${HOME_PATH}/.features
 
 apt-get update
 
@@ -17,6 +16,7 @@ apt-get install -y curl \
                    unzip
 
 su - ${USER_NAME} -c "mkdir ${HOME_PATH}/code"
+su - ${USER_NAME} -c "mkdir ${HOME_PATH}/.features"
 # auto gen ssh key
 su - ${USER_NAME} -c "ssh-keygen -f ${HOME_PATH}/.ssh/id_rsa -t rsa -N ''"
 
