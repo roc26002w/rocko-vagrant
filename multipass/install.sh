@@ -44,7 +44,7 @@ then
   checkUserName
 fi
 
-su - ${USER_NAME} -c "bash ./provision/vendor/init.sh"
+sudo -H -u ${USER_NAME} -c "bash ./provision/vendor/init.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/ohmyzsh.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/docker.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/docker-compose.sh"
