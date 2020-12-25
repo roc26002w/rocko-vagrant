@@ -2,7 +2,7 @@
 
 echo '======= Install init.sh ======'
 
-mkdir /home/ubuntu/.features
+mkdir ${HOME}/.features
 
 apt-get update
 
@@ -16,11 +16,10 @@ apt-get install -y curl \
                    git-lfs \
                    unzip
 
-mkdir /home/ubuntu/code
-chown -R ubuntu:ubuntu code
+mkdir ${HOME}/code
 
 # auto gen ssh key
-ssh-keygen -f /home/ubuntu/.ssh/id_rsa -t rsa -N ''
+ssh-keygen -f ${HOME}/.ssh/id_rsa -t rsa -N ''
 
-git config --global user.email "roc26002w@gmail.com"
-git config --global user.name "Rocko"
+git config --global user.email "${GIT_USER_EMAIL}"
+git config --global user.name "${GIT_USER_NAME}"
