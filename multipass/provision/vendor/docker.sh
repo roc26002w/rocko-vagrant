@@ -2,14 +2,11 @@
 
 echo '======= Install docker.sh ======'
 
-if [ -f /home/ubuntu/.features/docker ]
+if [ -f ${HOME_PATH}/.features/docker ]
 then
     echo "docker already installed."
     exit 0
 fi
-
-touch /home/ubuntu/.features/docker
-chown -Rf ubuntu:ubuntu /home/ubuntu/.features
 
 # Install docker-ce
 apt install -y docker.io
@@ -17,3 +14,6 @@ systemctl enable --now docker
 
 # Enable ubuntu user to run docker commands
 usermod -aG docker ubuntu
+
+touch ${HOME_PATH}/.features/docker
+chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features

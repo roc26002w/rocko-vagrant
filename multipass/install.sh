@@ -48,8 +48,8 @@ fi
 
 bash ./provision/vendor/init.sh
 bash ./provision/vendor/ohmyzsh.sh
-# su - ${USER_NAME} -c "bash ./provision/vendor/docker.sh"
-# su - ${USER_NAME} -c "bash ./provision/vendor/docker-compose.sh"
+bash ./provision/vendor/docker.sh
+bash ./provision/vendor/docker-compose.sh
 # su - ${USER_NAME} -c "bash ./provision/vendor/go.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/node.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/fzf.sh"
