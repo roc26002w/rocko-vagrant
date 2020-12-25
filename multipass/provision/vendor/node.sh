@@ -24,5 +24,4 @@ echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> ${H
 echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> ${HOME_PATH}/.zshrc
 
 su - ubuntu -c "source ${HOME_PATH}/.zshrc && nvm install 10"
-su - ubuntu -c "npm"
-su - ubuntu -c "npm install -g neovim"
+su - ubuntu -c "source ${HOME_PATH}/.zshrc && npm install -g neovim"
