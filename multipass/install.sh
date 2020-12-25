@@ -47,7 +47,7 @@ then
 fi
 
 bash ./provision/vendor/init.sh
-# su - ${USER_NAME} -c "bash ./provision/vendor/ohmyzsh.sh"
+bash ./provision/vendor/ohmyzsh.sh
 # su - ${USER_NAME} -c "bash ./provision/vendor/docker.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/docker-compose.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/go.sh"

@@ -7,7 +7,7 @@ then
     exit 0
 fi
 
-touch /home/ubuntu/.features/oh-my-zsh
+touch ${HOME_PATH}/.features/oh-my-zsh
 chown -Rf ubuntu:ubuntu /home/ubuntu/.features
 
 # Install oh-my-zsh
@@ -26,3 +26,5 @@ git clone https://github.com/romkatv/powerlevel10k.git /home/ubuntu/.oh-my-zsh/c
 
 chsh -s /bin/zsh ubuntu
 chown -R ubuntu:ubuntu /home/ubuntu/.oh-my-zsh
+
+echo "======= ${ZSH_CUSTOM} ==========="
