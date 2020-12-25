@@ -5,7 +5,7 @@ function inputGitUserEmail(){
   read ans
   answer=${ans,,}
 
-  export GIT_USER_MAIL=${answer}
+  export GIT_USER_MAIL="${answer}"
 }
 
 function inputGitUserName(){
@@ -13,7 +13,7 @@ function inputGitUserName(){
   read ans
   answer=${ans,,}
 
-  export GIT_USER_NAME=${answer}
+  export GIT_USER_NAME="${answer}"
 }
 
 function checkUserName(){

@@ -16,11 +16,9 @@ apt-get install -y curl \
                    git-lfs \
                    unzip
 
-mkdir ${HOME_PATH}/code
-chown -R ${USER_NAME}:${USER_NAME} ${HOME_PATH}/code
-
+su - ${USER_NAME} -c "mkdir ${HOME_PATH}/code"
 # auto gen ssh key
-ssh-keygen -f ${HOME_PATH}/.ssh/id_rsa -t rsa -N ''
+su - ${USER_NAME} -c "ssh-keygen -f ${HOME_PATH}/.ssh/id_rsa -t rsa -N ''"
 
-git config --global user.email "${GIT_USER_EMAIL}"
-git config --global user.name "${GIT_USER_NAME}"
+su - ${USER_NAME} -c "git config --global user.email \"${GIT_USER_EMAIL}\""
+su - ${USER_NAME} -c "git config --global user.name \"${GIT_USER_NAME}\""
