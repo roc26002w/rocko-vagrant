@@ -20,7 +20,7 @@ mkdir ${HOME_PATH}/code
 chown -R ${USER_NAME}:${USER_NAME} ${HOME_PATH}/code
 
 # auto gen ssh key
-ssh-keygen -f ${HOME}/.ssh/id_rsa -t rsa -N ''
+ssh-keygen -f ${HOME_PATH}/.ssh/id_rsa -t rsa -N ''
 
 git config --global user.email "${GIT_USER_EMAIL}"
 git config --global user.name "${GIT_USER_NAME}"
