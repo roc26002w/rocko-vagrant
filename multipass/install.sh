@@ -52,8 +52,8 @@ bash ./provision/vendor/docker.sh
 bash ./provision/vendor/docker-compose.sh
 bash ./provision/vendor/go.sh
 bash ./provision/vendor/node.sh
-# su - ${USER_NAME} -c "bash ./provision/vendor/fzf.sh"
-# su - ${USER_NAME} -c "bash ./provision/vendor/php.sh"
+bash ./provision/vendor/fzf.sh
+bash ./provision/vendor/php.sh
 # su - ${USER_NAME} -c "bash ./provision/vendor/neovim.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/rocko-vim.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/python.sh"

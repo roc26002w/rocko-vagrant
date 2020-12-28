@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
 echo '======= Install php.sh ======'
-if [ -f /home/ubuntu/.features/php ]
+if [ -f ${HOME_PATH}/.features/php ]
 then
-    echo "php 7.4 already installed."
+    echo "php already installed."
     exit 0
 fi
 
-touch /home/ubuntu/.features/php
-chown -Rf ubuntu:ubuntu /home/ubuntu/.features
 
 apt-add-repository ppa:ondrej/php -y
 
@@ -56,6 +54,13 @@ sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.2/cli/php.ini
 sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.2/cli/php.ini
 sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/7.2/cli/php.ini
 
+sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/8.0/cli/php.ini
+sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.0/cli/php.ini
+sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.0/cli/php.ini
+sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.0/cli/php.ini
+
 # set php7.4 to default
 update-alternatives --set php /usr/bin/php7.4
 
+touch ${HOME_PATH}/.features/php
+chown -Rf ubuntu:ubuntu ${HOME_PATH}/.features
