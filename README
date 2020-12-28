@@ -1,0 +1,41 @@
+# Rocko-Vagrant Install Script
+
+這是 Rocko 的虛機開發環境
+
+## Feature
+
+* nvim
+* fzf
+* php (7.2 7.4 8.0)
+* python
+* go
+* node
+* microk8s
+* docker
+* docker-compose
+
+## Install
+
+### Multipass
+
+#### Lunch vm example
+* `multipass launch -c 4 -d 50G -m 8G -n primary 20.04`
+  * c = cpu
+  * d = disk
+  * m = memory
+  * n = vm name
+  * image = ubuntu 20.04
+
+* `multipass exec primary -- git clone https://github.com/roc26002w/rocko-vagrant`
+* `multipass exec primary -- cd rocko-vagrant && sudo bash install.sh`
+
+### Git Source
+* `git clone clone https://github.com/roc26002w/rocko-vagrant`
+* `cd rocko-vagrant`
+* `sudo bash install.sh`
+
+### Change ubuntu user name
+
+also can change install user
+* `sudo bash install.sh vagrant`
+  * change default install to vagrant user
