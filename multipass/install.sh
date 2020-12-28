@@ -54,7 +54,7 @@ bash ./provision/vendor/go.sh
 bash ./provision/vendor/node.sh
 bash ./provision/vendor/fzf.sh
 bash ./provision/vendor/php.sh
-# su - ${USER_NAME} -c "bash ./provision/vendor/neovim.sh"
+bash ./provision/vendor/neovim.sh
 # su - ${USER_NAME} -c "bash ./provision/vendor/rocko-vim.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/python.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/laradock.sh"

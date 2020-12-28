@@ -1,15 +1,15 @@
 echo '======= Install neovim.sh ======'
-if [ -f /home/ubuntu/.features/neovim ]
+if [ -f ${HOME_PATH}/.features/neovim ]
 then
     echo "neovim already installed."
     exit 0
 fi
 
-touch /home/ubuntu/.features/neovim
+touch ${HOME_PATH}/.features/neovim
 
 apt-get install -y neovim
 
-curl -fLo /home/ubuntu/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+curl -fLo ${HOME_PATH}/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-chown -Rf ubuntu:ubuntu /home/ubuntu/
+chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/
