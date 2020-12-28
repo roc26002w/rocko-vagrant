@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 echo '======= Install microk8s ======'
-if [ -f /home/ubuntu/.features/microk8s ]
+if [ -f ${HOME_PATH}/.features/microk8s ]
 then
     echo "microk8s already installed."
     exit 0
 fi
 
-touch /home/ubuntu/.features/microk8s
-chown -Rf ubuntu:ubuntu /home/ubuntu/.features
+touch ${HOME_PATH}/.features/microk8s
+chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
 
 # install microk8s
 

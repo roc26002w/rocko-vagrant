@@ -59,4 +59,4 @@ bash ./provision/vendor/python.sh
 bash ./provision/vendor/laradock.sh
 bash ./provision/vendor/tmux.sh
 bash ./provision/vendor/ansible.sh
-# su - ${USER_NAME} -c "bash ./provision/vendor/microk8s.sh"
+bash ./provision/vendor/microk8s.sh
