@@ -13,6 +13,6 @@ touch ${HOME_PATH}/.features/ansible
 apt-get install -y ansible
 
 # Install python ansible
-su ${USER_NAME} -C "pip install ansible"
+su ${USER_NAME} -c "pip install ansible"
 
 chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/
