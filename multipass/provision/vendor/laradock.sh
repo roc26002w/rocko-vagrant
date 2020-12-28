@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
 
 echo '======= Install laradock ======'
-if [ -f /home/ubuntu/.features/laradock ]
+if [ -f ${HOME_PATH}/.features/laradock ]
 then
     echo "laradock already installed."
     exit 0
 fi
 
-touch /home/ubuntu/.features/laradock
-
-chown -Rf ubuntu:ubuntu /home/ubuntu/.features
 
 # install laradock
+git clone https://github.com/laradock/laradock.git ${HOME_PATH}/code/laradock
+cp ${HOME_PATH}/code/laradock/env-example ${HOME_PATH}/code/laradock/.env
+chown ${USER_NAME}:${USER_NAME} -R ${HOME_PATH}/code/laradock
 
-git clone https://github.com/laradock/laradock.git /home/ubuntu/code/laradock
-
-cp /home/ubuntu/code/laradock/env-example /home/ubuntu/code/laradock/.env
-
-chown ubuntu:ubuntu -R /home/ubuntu/code/laradock
+touch ${HOME_PATH}/.features/laradock
+chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
