@@ -1,12 +1,12 @@
 echo '======= Install python.sh ======'
-if [ -f /home/ubuntu/.features/python ]
+if [ -f ${HOME_PATH}/.features/python ]
 then
     echo "python already installed."
     exit 0
 fi
 
-touch /home/ubuntu/.features/python
-chown -Rf ubuntu:ubuntu /home/ubuntu/.features
+touch ${HOME_PATH}/.features/python
+chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
 
 apt-get install -y software-properties-common
 
@@ -21,14 +21,14 @@ apt-get install -y python3-dev \
                    libssl-dev \
                    libffi-dev
 
-mkdir /home/ubuntu/.env
-mkdir /home/ubuntu/.env/python
+mkdir ${HOME_PATH}/.env
+mkdir ${HOME_PATH}/.env/python
 
 apt-get install -y python3-venv
 
-python3 -m venv /home/ubuntu/.env/python
-source /home/ubuntu/.env/python/bin/activate
+python3 -m venv ${HOME_PATH}/.env/python
+source ${HOME_PATH}/.env/python/bin/activate
 
-chown -R ubuntu:ubuntu /home/ubuntu/.env
+chown -R ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.env
 
-su ubuntu -c "pip install neovim"
+su ${USER_NAME} -c "pip install neovim"

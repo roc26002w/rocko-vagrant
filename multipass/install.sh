@@ -56,7 +56,7 @@ bash ./provision/vendor/fzf.sh
 bash ./provision/vendor/php.sh
 bash ./provision/vendor/neovim.sh
 bash ./provision/vendor/rocko-vim.sh
-# su - ${USER_NAME} -c "bash ./provision/vendor/python.sh"
+bash ./provision/vendor/python.sh
 # su - ${USER_NAME} -c "bash ./provision/vendor/laradock.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/tmux.sh"
 # su - ${USER_NAME} -c "bash ./provision/vendor/ansible.sh"
