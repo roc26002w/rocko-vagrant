@@ -31,4 +31,4 @@ source ${HOME_PATH}/.env/python/bin/activate
 
 chown -R ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.env
 
-su ${USER_NAME} -c "pip install neovim"
+su ${USER_NAME} -c "source ~/.zshrc && pip install neovim"
