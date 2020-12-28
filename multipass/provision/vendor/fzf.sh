@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
 
 echo '======= Install fzf.sh ======'
-if [ -f /home/ubuntu/.features/fzf ]
+if [ -f ${HOME_PATH}/.features/fzf ]
 then
     echo "fzf already installed."
     exit 0
 fi
 
-touch /home/ubuntu/.features/fzf
-chown -Rf ubuntu:ubuntu /home/ubuntu/.features
-
 # install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git /home/ubuntu/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME_PATH}/.fzf
 
-chown -Rf ubuntu:ubuntu /home/ubuntu/.fzf
+chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.fzf
 
-su ubuntu -c '/home/ubuntu/.fzf/install --all'
+su ${USER_NAME} -c "${HOME_PATH}/.fzf/install --all"
 
+touch ${HOME_PATH}/.features/fzf
+chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
