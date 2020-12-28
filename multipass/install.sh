@@ -40,7 +40,6 @@ fi
 # has USER_NAME and not input variable
 if [[ ! -z ${USER_NAME} && -z $1 ]]
 then
-  inputUserName
   inputGitUserEmail
   inputGitUserName
   checkUserName
