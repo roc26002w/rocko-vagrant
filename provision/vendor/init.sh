@@ -13,6 +13,7 @@ apt-get install -y curl \
                    zsh \
                    git \
                    git-lfs \
+                   icdiff \
                    unzip
 
 su - ${USER_NAME} -c "mkdir ${HOME_PATH}/code"
