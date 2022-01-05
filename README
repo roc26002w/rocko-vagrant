@@ -19,7 +19,7 @@
 ### Multipass
 
 #### Lunch vm example
-* `multipass launch -c 4 -d 50G -m 8G -n primary 20.04`
+* `multipass launch -c 4 -d 50G -m 8G -n primary 20.04 && multipass unmount primary`
   * c = cpu
   * d = disk
   * m = memory
