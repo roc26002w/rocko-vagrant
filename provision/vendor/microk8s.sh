@@ -13,6 +13,7 @@ chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
 # install microk8s
 snap install microk8s --classic
 microk8s status --wait-ready
+iptables -P FORWARD ACCEPT
 
 # default stop it!
 microk8s stop
