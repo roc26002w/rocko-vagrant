@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-echo '======= Install helm3 ======'
-if [ -f ${HOME_PATH}/.features/helm3 ]
+echo '======= Install helm ======'
+if [ -f ${HOME_PATH}/.features/helm ]
 then
-    echo "helm3 already installed."
+    echo "helm already installed."
     exit 0
 fi
 
-touch ${HOME_PATH}/.features/helm3
+touch ${HOME_PATH}/.features/helm
 chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
 
-# install helm3
-snap install helm3 --classic
+# install helm
+snap install helm --classic
