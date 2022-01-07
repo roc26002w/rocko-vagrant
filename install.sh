@@ -47,8 +47,8 @@ fi
 
 bash ./provision/vendor/init.sh
 bash ./provision/vendor/ohmyzsh.sh
-bash ./provision/vendor/docker.sh
-bash ./provision/vendor/docker-compose.sh
+# bash ./provision/vendor/docker.sh
+# bash ./provision/vendor/docker-compose.sh
 bash ./provision/vendor/go.sh
 bash ./provision/vendor/node.sh
 bash ./provision/vendor/fzf.sh
@@ -61,3 +61,5 @@ bash ./provision/vendor/tmux.sh
 bash ./provision/vendor/ansible.sh
 bash ./provision/vendor/microk8s.sh
 bash ./provision/vendor/helm.sh
+bash ./provision/vendor/podman.sh
+bash ./provision/vendor/podman-compose.sh

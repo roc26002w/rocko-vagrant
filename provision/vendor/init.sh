@@ -2,7 +2,6 @@
 
 echo '======= Install init.sh ======'
 
-
 apt-get update
 
 apt-get install -y curl \
