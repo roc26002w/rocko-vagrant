@@ -8,15 +8,24 @@ apt-get install -y curl \
                    htop \
                    silversearcher-ag \
                    tig \
-                   ctags \
-                   zsh \
+                   exuberant-ctags \
+                   zsh-common \
+                   zsh-doc \
+                   zip \
                    git \
                    git-lfs \
                    icdiff \
                    unzip
 
-su - ${USER_NAME} -c "mkdir ${HOME_PATH}/code"
-su - ${USER_NAME} -c "mkdir ${HOME_PATH}/.features"
+if [[ ! -d "${HOME_PATH}/code" ]]
+then
+  su - ${USER_NAME} -c "mkdir ${HOME_PATH}/code"
+fi
+
+if [[ ! -d "${HOME_PATH}/.features" ]]
+then
+  su - ${USER_NAME} -c "mkdir ${HOME_PATH}/.features"
+fi
 # auto gen ssh key
 su - ${USER_NAME} -c "ssh-keygen -f ${HOME_PATH}/.ssh/id_rsa -t rsa -N ''"
 

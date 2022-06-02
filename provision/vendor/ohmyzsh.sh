@@ -8,9 +8,7 @@ then
 fi
 
 touch ${HOME_PATH}/.features/oh-my-zsh
-
 export ZSH_CUSTOM=${HOME_PATH}/.oh-my-zsh/custom
-echo "======= ${ZSH_CUSTOM} ==========="
 
 # Install oh-my-zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ${HOME_PATH}/.oh-my-zsh
@@ -24,6 +22,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}
 
 # powerlevel10k
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM}/themes/powerlevel10k
+
+# zim
+# su ${USER_NAME} -c  "curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh"
 
 chsh -s /bin/zsh ${USER_NAME}
 chown -R ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.oh-my-zsh
