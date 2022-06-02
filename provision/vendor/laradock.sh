@@ -10,7 +10,7 @@ fi
 
 # install laradock
 git clone https://github.com/laradock/laradock.git ${HOME_PATH}/code/laradock
-cp ${HOME_PATH}/code/laradock/env-example ${HOME_PATH}/code/laradock/.env
+cp ${HOME_PATH}/code/laradock/.env-example ${HOME_PATH}/code/laradock/.env
 chown ${USER_NAME}:${USER_NAME} -R ${HOME_PATH}/code/laradock
 
 touch ${HOME_PATH}/.features/laradock
