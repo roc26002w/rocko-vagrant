@@ -74,5 +74,47 @@ sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.2/cli/php.ini
 # set php7.4 to default
 update-alternatives --set php /usr/bin/php7.4
 
+# add pcov extentsions
+# install php7.4 extentsions
+pecl -d php_suffix=7.4 install pcov
+pecl uninstall -r pcov
+echo "extension=\"/usr/lib/php/20190902/pcov.so\"" > pcov.ini
+cp pcov.ini /etc/php/7.4/mods-available/
+
+
+# install php8.0 extentsions
+pecl -d php_suffix=8.0 install pcov
+pecl uninstall -r pcov
+echo "extension=\"/usr/lib/php/20200930/pcov.so\"" > pcov.ini
+cp pcov.ini /etc/php/8.0/mods-available/
+
+
+# install php8.1 extentsions
+pecl -d php_suffix=8.1 install pcov
+pecl uninstall -r pcov
+echo "extension=\"/usr/lib/php/20210902/pcov.so\"" > pcov.ini
+cp pcov.ini /etc/php/8.1/mods-available/
+
+
+# install php8.2 extentsions
+pecl -d php_suffix=8.2 install pcov
+pecl uninstall -r pcov
+echo "extension=\"/usr/lib/php/20220829/pcov.so\"" > pcov.ini
+cp pcov.ini /etc/php/8.2/mods-available/
+
+rm pcov.ini
+
+# enable xdebug
+# phpenmod xdebug
+
+# disable xdebug
+# phpdismod xdebug
+
+# enable pcov
+# phpenmod pcov
+
+# disable pcov
+# phpdismod pcov
+
 touch ${HOME_PATH}/.features/php
 chown -Rf ubuntu:ubuntu ${HOME_PATH}/.features
