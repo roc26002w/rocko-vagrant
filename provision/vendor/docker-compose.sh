@@ -7,6 +7,7 @@ then
     echo "docker-compose already installed."
     exit 0
 fi
+
 #Install docker-compose official git repository
 
 CURRENT_VERSION="$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | cut -d ':' -f2 | cut -d '"' -f2)"
