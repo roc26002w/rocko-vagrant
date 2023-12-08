@@ -5,16 +5,19 @@ then
     exit 0
 fi
 
+NEEDRESTART_MODE=a
+DEBIAN_FRONTEND=noninteractive
+
 touch ${HOME_PATH}/.features/python
 chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
 
-apt-get install -y software-properties-common
+apt-get install -yqq software-properties-common
 
-add-apt-repository ppa:deadsnakes/ppa -y
+add-apt-repository ppa:deadsnakes/ppa -yqq
 
 apt-get update
 
-apt-get install -y python3-dev \
+apt-get install -yqq python3-dev \
                    python3-pip \
                    python-msgpack \
                    build-essential \
@@ -24,7 +27,7 @@ apt-get install -y python3-dev \
 mkdir ${HOME_PATH}/.env
 mkdir ${HOME_PATH}/.env/python
 
-apt-get install -y python3-venv
+apt-get install -yqq python3-venv
 
 python3 -m venv ${HOME_PATH}/.env/python
 source ${HOME_PATH}/.env/python/bin/activate

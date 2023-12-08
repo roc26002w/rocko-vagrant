@@ -15,7 +15,8 @@ chown -Rf ${USER_NAME}:${USER_NAME} ${HOME_PATH}/.features
 #
 
 # install new release go
-wget -qO- "https://golang.org/dl/$(curl https://go.dev/VERSION\?m\=text).linux-$(dpkg --print-architecture).tar.gz"  | tar -zxvf - -C /tmp
+wget -qO- "https://golang.org/dl/$( curl https://go.dev/VERSION\?m\=text | grep go |  awk '{print $1}').linux-$(dpkg --print-architecture).tar.gz"  | tar -zxvf - -C /tmp
+
 mv /tmp/go /usr/local
 export PATH=$PATH:/usr/local/go/bin
 

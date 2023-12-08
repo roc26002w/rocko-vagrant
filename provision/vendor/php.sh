@@ -7,6 +7,7 @@ then
     exit 0
 fi
 
+NEEDRESTART_MODE=a
 DEBIAN_FRONTEND=noninteractive
 
 apt-add-repository ppa:ondrej/php -y
@@ -84,9 +85,6 @@ sed -i "s/display_errors = .*/display_errors = On/" /etc/php/8.3/cli/php.ini
 sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/8.3/cli/php.ini
 sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/8.3/cli/php.ini
 
-# set php7.4 to default
-update-alternatives --set php /usr/bin/php7.4
-
 # add pcov extentsions
 # install php7.4 extentsions
 pecl -d php_suffix=7.4 install pcov
@@ -128,6 +126,9 @@ rm pcov.ini
 
 # disable pcov
 # phpdismod pcov
+
+# set php7.4 to default
+update-alternatives --set php /usr/bin/php8.2
 
 touch ${HOME_PATH}/.features/php
 chown -Rf ubuntu:ubuntu ${HOME_PATH}/.features
