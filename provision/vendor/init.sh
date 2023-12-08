@@ -4,18 +4,20 @@ echo '======= Install init.sh ======'
 
 apt-get update
 
-apt-get install -y curl \
-                   htop \
-                   silversearcher-ag \
-                   tig \
-                   exuberant-ctags \
-                   zsh-common \
-                   zsh-doc \
-                   zip \
-                   git \
-                   git-lfs \
-                   icdiff \
-                   unzip
+apt-get install -yqq curl \
+                     htop \
+                     silversearcher-ag \
+                     tig \
+                     exuberant-ctags \
+                     zsh-common \
+                     zsh-doc \
+                     zip \
+                     git \
+                     git-lfs \
+                     icdiff \
+                     unzip \
+                     ca-certificates \
+                     gnupg
 
 if [[ ! -d "${HOME_PATH}/code" ]]
 then
