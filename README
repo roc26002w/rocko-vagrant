@@ -1,0 +1,21 @@
+# Rocko-Vagrant Install Script
+
+這是 Rocko 的虛機開發環境
+
+## Feature
+* brew
+* item2
+* oh-my-zsh
+* raycast
+* fzf
+* orbstack
+* php
+* composer
+* nvm
+
+## Install
+
+### Git Source
+* `git clone --branch macOS https://github.com/roc26002w/rocko-vagrant`
+* `cd rocko-vagrant`
+* `sudo bash install.sh`
