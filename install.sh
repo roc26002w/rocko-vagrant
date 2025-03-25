@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export $HOME_PATH = "~/";
+
 function inputGitUserEmail(){
   echo "請輸入 git email: "
   read ans
@@ -27,4 +29,8 @@ xcode-select --install
 
 bash ./provision/vendor/brew.sh
 bash ./provision/vendor/ohmyzsh.sh
+bash ./provision/vendor/rocko-vim.sh
+
+# config setting
+
 
