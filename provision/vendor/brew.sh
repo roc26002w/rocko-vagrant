@@ -3,6 +3,9 @@
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# https://github.com/shivammathur/homebrew-php
+brew tap shivammathur/php
+
 brew update
 
 brew install --cask iterm2
@@ -18,6 +21,6 @@ brew install php@8.2
 brew install powerlevel10k
 brew install neovim
 brew install pyenv
+brew install icdiff
+brew install ctag
 
-# https://github.com/shivammathur/homebrew-php
-brew tap shivammathur/php
