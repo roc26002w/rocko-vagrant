@@ -18,3 +18,6 @@ ln -sf "${HOME_PATH}/.config/rocko-vim/neovim/.config/nvim" "${HOME_PATH}/.confi
 # tig
 ln -sf "${HOME_PATH}/.config/rocko-vim/tig/.tigrc" "${HOME_PATH}/.tigrc"
 
+# neovim plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME_PATH/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

@@ -29,6 +29,7 @@ xcode-select --install
 
 bash ./provision/vendor/brew.sh
 bash ./provision/vendor/ohmyzsh.sh
+bash ./provision/vendor/php.sh
 bash ./provision/vendor/rocko-vim.sh
 
 # config setting

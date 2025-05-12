@@ -23,4 +23,5 @@ brew install neovim
 brew install pyenv
 brew install icdiff
 brew install ctag
+brew install zsh-syntax-highlighting
 
