@@ -25,3 +25,8 @@ brew install icdiff
 brew install ctag
 brew install zsh-syntax-highlighting
 
+# gemini cli
+# https://gemini-cli.gh.miniasp.com/cli/
+brew install gemini-cli
+
+

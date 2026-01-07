@@ -3,6 +3,7 @@
 git clone https://github.com/roc26002w/rocko-vim.git -- --branch macos "${HOME_PATH}/.config/rocko-vim"
 
 # zsh
+mkdir -p "${HOME_PATH}/.oh-my-zsh/custom/themes"
 ln -sf "${HOME_PATH}/.config/rocko-vim/oh-my-zsh/.zshrc" "${HOME_PATH}/.zshrc"
 ln -sf "${HOME_PATH}/.config/rocko-vim/oh-my-zsh/.theme" "${HOME_PATH}/.oh-my-zsh/custom/themes/.theme"
 
@@ -21,3 +22,7 @@ ln -sf "${HOME_PATH}/.config/rocko-vim/tig/.tigrc" "${HOME_PATH}/.tigrc"
 # neovim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME_PATH/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# gemini cli
+mkdir -p "${HOME_PATH}/.gemini"
+ln -sf "${HOME_PATH}/.config/rocko-vim/gemini/prompts/agents.md" "${HOME_PATH}/.gemini/GEMINI.md"
