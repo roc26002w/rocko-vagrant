@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-mkdir -p ~/.config/nvim/pack/copilotchat/start
-cd ~/.config/nvim/pack/copilotchat/start
+# ==== new install in rocko-vim neovim config ====
 
-git clone https://github.com/github/copilot.vim
-git clone https://github.com/nvim-lua/plenary.nvim
+#mkdir -p ~/.config/nvim/pack/copilotchat/start
+#cd ~/.config/nvim/pack/copilotchat/start
 
-git clone https://github.com/CopilotC-Nvim/CopilotChat.nvim
+#git clone https://github.com/github/copilot.vim
+#git clone https://github.com/nvim-lua/plenary.nvim
+
+#git clone https://github.com/CopilotC-Nvim/CopilotChat.nvim
 
 # Enable run
 # nvim :PlugInstall
